@@ -1,7 +1,6 @@
 package repository
 
 import (
-	"log"
 	"math/rand"
 	"strconv"
 )
@@ -33,8 +32,6 @@ func NewTransactions(qty int) *Transactions {
 		t := newTransaction(qty)
 		toProcess[q] = t
 	}
-
-	log.Printf("Tamanho: %d\v", len(toProcess))
 
 	return &Transactions{
 		ToProcess: toProcess,

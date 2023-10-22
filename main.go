@@ -14,4 +14,9 @@ func main() {
 	// 	log.Printf("Descrição: %s | ID: %d | Valor: %f | Parcelas: %d", array.ToProcess[l].Descricao, array.ToProcess[l].ID, array.ToProcess[l].Valor, array.ToProcess[l].Parcelas)
 	// }
 	usecase.ProcessInLine()
+	log.Println()
+	log.Println()
+	usecase.ProcessChannel()
+	log.Println()
+	log.Println()
 }
