@@ -3,6 +3,7 @@ package repository
 import (
 	"math/rand"
 	"strconv"
+	"time"
 )
 
 type Transaction struct {
@@ -32,6 +33,8 @@ func NewTransactions(qty int) *Transactions {
 		t := newTransaction(qty)
 		toProcess[q] = t
 	}
+
+	time.Sleep(150*time.Millisecond)
 
 	return &Transactions{
 		ToProcess: toProcess,

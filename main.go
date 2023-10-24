@@ -9,14 +9,15 @@ import (
 func main() {
 	log.Println("iniciando...")
 
-	// array := repository.NewTransactions(300)
-	// for l := 0; l<10; l++ {
-	// 	log.Printf("Descrição: %s | ID: %d | Valor: %f | Parcelas: %d", array.ToProcess[l].Descricao, array.ToProcess[l].ID, array.ToProcess[l].Valor, array.ToProcess[l].Parcelas)
-	// }
-	usecase.ProcessInLine()
+	qtdeInLine, durationInLine := usecase.ProcessInLine()
 	log.Println()
 	log.Println()
-	usecase.ProcessChannel()
+
+	qtdeChannel, durationChannel := usecase.ProcessChannel()
 	log.Println()
 	log.Println()
+
+	log.Println("fim...")
+	log.Printf("in-line: %s for %d items\n", durationInLine, qtdeInLine)
+	log.Printf("channel: %s for %d items\n", durationChannel, qtdeChannel)
 }
